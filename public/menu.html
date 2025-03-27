@@ -44,7 +44,7 @@
         .menu-item h3 {
             font-size: 1.5em;
             margin: 10px 0;
-            color: #333;
+            color: white; /* Cor branca no nome dos pratos */
         }
 
         .menu-item p {
@@ -128,6 +128,75 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
+        /* Estilo para a salada de frango com a nova imagem de fundo */
+        .salad-item {
+            background-image: url('https://i.pinimg.com/originals/30/37/e1/3037e11ae78b0d2b8c8c7b8056ab31e1.jpg');
+            background-size: 100% 100%; /* A imagem ocupa exatamente o tamanho da caixa */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px; /* Definir altura */
+            width: 100%; /* Garantir que ocupe toda a largura disponível */
+            display: flex;
+            align-items: flex-end; /* Coloca o texto na parte inferior */
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .salad-item h3 {
+            margin-bottom: 10px;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo para o item de arroz com carne com a nova imagem de fundo */
+        .rice-item {
+            background-image: url('https://img.cybercook.com.br/foodiefeed/k3jnvcftqnqodhgjgxu01pgantzxdi9mzbvfxbiv.jpeg');
+            background-size: 100% 100%; /* A imagem ocupa exatamente o tamanho da caixa */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px; /* Definir altura */
+            width: 100%; /* Garantir que ocupe toda a largura disponível */
+            display: flex;
+            align-items: flex-end; /* Coloca o texto na parte inferior */
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .rice-item h3 {
+            margin-bottom: 10px;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Estilo para o item de espaguete à carbonara com a nova imagem de fundo */
+        .pasta-item {
+            background-image: url('https://3.bp.blogspot.com/-ro7tlIDVreI/VvrV4voxVXI/AAAAAAAAALI/-NWA_0WfmdIw5cB7tFLbH4-tt_A7Uej1A/s1600/img_1194987816767348.jpeg');
+            background-size: 100% 100%; /* A imagem ocupa exatamente o tamanho da caixa */
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200px; /* Definir altura */
+            width: 100%; /* Garantir que ocupe toda a largura disponível */
+            display: flex;
+            align-items: flex-end; /* Coloca o texto na parte inferior */
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .pasta-item h3 {
+            margin-bottom: 10px;
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
     </style>
 </head>
 <body>
@@ -152,24 +221,21 @@
             <div class="price">R$ 49,90</div>
         </div>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/400x200?text=Salada" alt="Salada">
+        <!-- Salada de Frango com a nova imagem de fundo -->
+        <div class="menu-item salad-item">
             <h3>Salada de Frango</h3>
-            <p>Salada fresca com peito de frango grelhado, folhas verdes e molho especial.</p>
             <div class="price">R$ 24,90</div>
         </div>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/400x200?text=Prato+Com+Carne" alt="Prato com Carne">
+        <!-- Prato de Carne com Arroz com a nova imagem de fundo -->
+        <div class="menu-item rice-item">
             <h3>Prato de Carne com Arroz</h3>
-            <p>Carne assada servida com arroz fresquinho e batatas assadas.</p>
             <div class="price">R$ 44,90</div>
         </div>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/400x200?text=Espaguete" alt="Espaguete">
+        <!-- Espaguete à Carbonara com a nova imagem de fundo -->
+        <div class="menu-item pasta-item">
             <h3>Espaguete à Carbonara</h3>
-            <p>Espaguete com molho cremoso de ovos, queijo parmesão e bacon crocante.</p>
             <div class="price">R$ 34,90</div>
         </div>
     </div>
