@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobremesas</title>
+    <style>
+        /* Resetando algumas propriedades padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif; /* Fonte clássica e elegante */
+            background-color: #f4f4f4; /* Cor de fundo neutra e sofisticada */
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 50px 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colunas, ajustando automaticamente */
+            gap: 20px; /* Pequeno espaço entre os itens */
+            padding: 40px 10%;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px; /* Tamanho fixo para garantir que todos os quadrados tenham a mesma altura */
+            width: 100%; /* Largura 100% para que a grid ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Ajusta o conteúdo dentro do quadrado */
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 220px; /* A imagem vai preencher a parte superior */
+            object-fit: cover;
+            border-bottom: 3px solid #2c3e50; /* Linha sutil separando a imagem do conteúdo */
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #dcdcdc; /* Cor do título alterada para um cinza claro */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+            text-align: center;
+            flex-grow: 1; /* Permite que o título ocupe o espaço necessário */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o título */
+            justify-content: center; /* Centraliza horizontalmente o título */
+            padding: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #8B0000; /* Cor do preço alterada para um vermelho bem escuro */
+            margin-top: 10px; /* Distância entre título e preço */
+            font-family: 'Georgia', serif;
+            text-align: center; /* Centraliza o preço */
+            padding-bottom: 10px;
+        }
+
+        /* Sobremesas específicas com imagens de fundo */
+
+        /* Sobremesa de Chocolate */
+        .dessert-chocolate {
+            background-image: url('https://i.pinimg.com/1200x/75/cb/5d/75cb5d98fc8bc7f0167238b6cafccfb9.jpg'); /* Imagem original */
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .dessert-chocolate h3 {
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            padding-bottom: 10px;
+        }
+
+        /* Sobremesa de Tiramisu */
+        .dessert-tiramisu {
+            background-image: url('https://i.pinimg.com/1200x/e8/6a/20/e86a201cdef0e26262e27420d4861b17.jpg'); /* Imagem para Tiramisu */
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .dessert-tiramisu h3 {
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Sobremesa de Pavê */
+        .dessert-pave {
+            background-image: url('https://i.pinimg.com/1200x/9a/27/10/9a271084b6b2e8d78739b30a9c7bd67b.jpg'); /* Imagem para Pavê de Chocolate */
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .dessert-pave h3 {
+            margin-bottom: 10px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .dessert-pave .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #8B0000; /* Cor do preço alterada para vermelho bem escuro */
+            margin-top: 10px;
+        }
+
+        /* Sobremesa de Cheesecake */
+        .dessert-cheesecake {
+            background-image: url('https://i.pinimg.com/1200x/5e/a0/b3/5ea0b32889b19e444df01a69c5e5a1f2.jpg'); /* Imagem para Cheesecake */
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .dessert-cheesecake h3 {
+            margin-bottom: 5px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .dessert-cheesecake .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #8B0000; /* Cor do preço alterada para vermelho bem escuro */
+            margin-top: 5px;
+        }
+
+        /* Sobremesa de Pudim */
+        .dessert-pudim {
+            background-image: url('https://i.pinimg.com/1200x/50/d7/24/50d724c1c972d51842d8de42f55b2aeb.jpg'); /* Nova imagem para Pudim de Leite Condensado */
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .dessert-pudim h3 {
+            margin-bottom: 5px;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .dessert-pudim .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #8B0000; /* Cor do preço alterada para vermelho bem escuro */
+            margin-top: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sobremesas</h1>
+    <div class="menu-container">
+        <!-- Sobremesa de Chocolate -->
+        <div class="menu-item dessert-chocolate">
+            <h3>Sobremesa de Chocolate</h3>
+            <div class="price">R$ 19,90</div>
+        </div>
+
+        <!-- Sobremesa de Tiramisu -->
+        <div class="menu-item dessert-tiramisu">
+            <h3>Tiramisu</h3>
+            <div class="price">R$ 24,90</div>
+        </div>
+
+        <!-- Sobremesa de Pavê -->
+        <div class="menu-item dessert-pave">
+            <h3>Pavê de Chocolate</h3>
+            <div class="price">R$ 22,90</div>
+        </div>
+
+        <!-- Sobremesa de Cheesecake -->
+        <div class="menu-item dessert-cheesecake">
+            <h3>Cheesecake</h3>
+            <div class="price">R$ 29,90</div>
+        </div>
+
+        <!-- Sobremesa de Pudim -->
+        <div class="menu-item dessert-pudim">
+            <h3>Pudim de Leite Condensado</h3>
+            <div class="price">R$ 15,90</div>
+        </div>
+    </div>
+
+</body>
+</html>
