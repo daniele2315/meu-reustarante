@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerantes</title>
+    <style>
+        /* Resetando algumas propriedades padrões */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin: 50px 0;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .menu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 colunas, ajustando automaticamente */
+            gap: 20px; /* Pequeno espaço entre os itens */
+            padding: 40px 10%;
+        }
+
+        .menu-item {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            border: 1px solid #ddd;
+            height: 320px; /* Tamanho fixo para garantir que todos os quadrados tenham a mesma altura */
+            width: 100%; /* Largura 100% para que a grid ocupe o espaço disponível */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .menu-item img {
+            width: 50%; /* Imagem reduzida para 50% da largura do quadrado */
+            height: auto; /* Ajustando a altura proporcionalmente */
+            object-fit: contain; /* Ajusta a imagem para caber completamente no quadrado sem cortar */
+            margin: 10px auto; /* Deixando a imagem centralizada e com uma margem */
+            border-bottom: 3px solid #2c3e50; /* Linha sutil separando a imagem do conteúdo */
+        }
+
+        .menu-item h3 {
+            font-size: 1.8em;
+            margin: 0;
+            color: #000; /* Cor do título agora preta */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            font-family: 'Georgia', serif;
+            letter-spacing: 1px;
+            text-align: center;
+            flex-grow: 1; /* Permite que o título ocupe o espaço necessário */
+            display: flex;
+            align-items: center; /* Centraliza verticalmente o título */
+            justify-content: center; /* Centraliza horizontalmente o título */
+            padding: 10px;
+        }
+
+        .menu-item .price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #8B0000; /* Cor do preço alterada para um vermelho bem escuro */
+            margin-top: 10px; /* Distância entre título e preço */
+            font-family: 'Georgia', serif;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+
+        /* Refrigerantes específicos com imagens de fundo */
+
+        /* Refrigerante de Cola */
+        .dessert-cola {
+            background-image: url('https://i.pinimg.com/1200x/02/28/73/022873ccff02741aa8c2577372684d5b.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Refrigerante de Laranja */
+        .dessert-laranja {
+            background-image: url('https://i.pinimg.com/1200x/f3/02/9f/f3029fbdb10389863391268e3733bc7e.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Refrigerante de Guaraná */
+        .dessert-guarana {
+            background-image: url('https://i.pinimg.com/1200x/a8/48/5e/a8485e17f8cb4f8fe4e46ca800739dbf.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Refrigerante de Limão */
+        .dessert-limao {
+            background-image: url('https://i.pinimg.com/1200x/67/70/ff/6770ffd0c88c134e86c1dc3e3e584f3c.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Refrigerante de Uva */
+        .dessert-uva {
+            background-image: url('https://i.pinimg.com/1200x/fc/e6/e4/fce6e4bb555508d7dea6f7b8196d1387.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Fanta Uva - Imagem ajustada para 50% */
+        .dessert-uva img {
+            width: 50%; /* Reduzindo a imagem para 50% da largura do quadrado */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Refrigerantes</h1>
+    <div class="menu-container">
+        <!-- Refrigerante de Cola -->
+        <div class="menu-item dessert-cola">
+            <h3>Refrigerante de Cola</h3>
+            <div class="price">R$ 5,90</div>
+        </div>
+
+        <!-- Refrigerante de Laranja -->
+        <div class="menu-item dessert-laranja">
+            <h3>Refrigerante de Laranja</h3>
+            <div class="price">R$ 5,50</div>
+        </div>
+
+        <!-- Refrigerante de Guaraná -->
+        <div class="menu-item dessert-guarana">
+            <h3>Refrigerante de Guaraná</h3>
+            <div class="price">R$ 6,00</div>
+        </div>
+
+        <!-- Refrigerante de Limão -->
+        <div class="menu-item dessert-limao">
+            <h3>Refrigerante de Limão</h3>
+            <div class="price">R$ 4,90</div>
+        </div>
+
+        <!-- Refrigerante de Uva -->
+        <div class="menu-item dessert-uva">
+            <h3>Refrigerante de Uva</h3>
+            <div class="price">R$ 5,70</div>
+        </div>
+    </div>
+
+</body>
+</html>
