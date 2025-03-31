@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -165,7 +165,7 @@
             </div>
             <!-- Novos Itens -->
             <div class="menu-item">
-                <img src="https://sushiexpress.com.br/wp-content/uploads/2020/06/sushi.jpg" alt="Sushi Especial">
+                <img src="https://koi.com.br/wp-content/uploads/2020/09/combinado-sushi-especial-para-2.jpg" alt="Sushi Especial">
                 <h3>Sushi Especial</h3>
                 <div class="price">R$ 49,90</div>
             </div>
