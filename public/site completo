@@ -149,7 +149,7 @@
         <h1>Menu de Comidas</h1>
         <div class="slider">
             <div class="menu-item">
-                <img src="https://www.pizza.com.br/wp-content/uploads/2020/03/pizza-margherita.jpg" alt="Pizza Margherita">
+                <img src="https://d2ova09jg8x3xk.cloudfront.net/rocketboypizza.com/maroubra/uploads/Margherita_-_web.png" alt="Pizza Margherita">
                 <h3>Pizza Margherita</h3>
                 <div class="price">R$ 39,90</div>
             </div>
