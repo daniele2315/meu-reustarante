@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -161,23 +162,23 @@
             <div class="menu-item">
                 <img src="https://i.pinimg.com/originals/30/37/e1/3037e11ae78b0d2b8c8c7b8056ab31e1.jpg" alt="Salada">
                 <h3>Salada</h3>
-                <div class="price">R$ 24,90</div>
+                <div class="price">R$ 23,00</div>
             </div>
             <!-- Novos Itens -->
             <div class="menu-item">
                 <img src="https://koi.com.br/wp-content/uploads/2020/09/combinado-sushi-especial-para-2.jpg" alt="Sushi Especial">
                 <h3>Sushi Especial</h3>
-                <div class="price">R$ 49,90</div>
+                <div class="price">R$ 20,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://img.cybercook.com.br/foodiefeed/k3jnvcftqnqodhgjgxu01pgantzxdi9mzbvfxbiv.jpeg" alt="Prato de Carne com Arroz">
                 <h3>Prato de Carne com Arroz</h3>
-                <div class="price">R$ 44,90</div>
+                <div class="price">R$ 20,00</div>
             </div>
             <div class="menu-item">
                 <img src="https://3.bp.blogspot.com/-ro7tlIDVreI/VvrV4voxVXI/AAAAAAAAALI/-NWA_0WfmdIw5cB7tFLbH4-tt_A7Uej1A/s1600/img_1194987816767348.jpeg" alt="Espaguete à Carbonara">
                 <h3>Espaguete à Carbonara</h3>
-                <div class="price">R$ 39,90</div>
+                <div class="price">R$ 21,00</div>
             </div>
         </div>
     </div>
