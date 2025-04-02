@@ -232,7 +232,7 @@
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/9a/27/10/9a271084b6b2e8d78739b30a9c7bd67b.jpg" alt="Pavê de Chocolate">
                 <h3>Pavê de Chocolate</h3>
-                <div class="price">R$ 18,00</div>
+                <div class="price">R$ 20,00</div>
                 <button class="buy-button">Comprar</button>
             </div>
             <div class="menu-item">
@@ -244,7 +244,7 @@
             <div class="menu-item">
             <img src="https://i.pinimg.com/1200x/50/d7/24/50d724c1c972d51842d8de42f55b2aeb.jpg" alt="Pudim de Leite Condesado">
                 <h3>Pudim de Leite Condensado</h3>
-                <div class="price">R$ 14,00</div>
+                <div class="price">R$ 16,00</div>
                 <button class="buy-button">Comprar</button>
             </div>
         </div>
@@ -257,7 +257,7 @@
             <div class="menu-item">
                 <img src="https://i.pinimg.com/1200x/0f/bb/c1/0fbbc11a5843f0e0cd1f44b7f1cb48da.jpg" alt="Drink">
                 <h3>Drink</h3>
-                <div class="price">R$ 15,00</div>
+                <div class="price">R$ 16,00</div>
                 <button class="buy-button">Comprar</button>
             </div>
             <div class="menu-item">
